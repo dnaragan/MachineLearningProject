@@ -1,0 +1,188 @@
+[PipelineBuilder]
+Name=pipeline_unique_renumber
+Number_Filters=20
+Version=5.1.501
+
+[0]
+Filter_Name=PhReader
+Filter_Human_Label=Read Ph File (Feature Ids)
+VolumeDataContainerName=VolumeDataContainer
+CellAttributeMatrixName=CellData
+FeatureIdsArrayName=FeatureIds
+InputFile=F:\\Research\\Work\\Dream3D_v5.1_wrking\\Output.ph
+Origin\size=3
+Origin\1\x=0
+Origin\2\y=0
+Origin\3\z=0
+Resolution\size=3
+Resolution\1\x=4
+Resolution\2\y=4
+Resolution\3\z=4
+
+[1]
+Filter_Name=EnsembleInfoReader
+Filter_Human_Label=Read Ensemble Info File
+DataContainerName=VolumeDataContainer
+CellEnsembleAttributeMatrixName=CellEnsembleData
+PhaseTypesArrayName=PhaseTypes
+CrystalStructuresArrayName=CrystalStructures
+InputFile=F:\\Research\\Work\\Dream3D_v5.1_wrking\\ensembleinfo.txt
+
+[2]
+Filter_Name=FeatureInfoReader
+Filter_Human_Label=Read Feature Info File
+CellAttributeMatrixName=VolumeDataContainer|CellData|
+CellFeatureAttributeMatrixName=CellFeatureData
+FeatureEulerAnglesArrayName=EulerAngles
+FeaturePhasesArrayName=Phases
+CellEulerAnglesArrayName=EulerAngles
+CellPhasesArrayName=Phases
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+InputFile=F:\\Research\\Work\\Dream3D_v5.1_wrking\\data.txt
+CreateCellLevelArrays=1
+RenumberFeatures=1
+
+[3]
+Filter_Name=RenameAttributeArray
+Filter_Human_Label=Rename Attribute Array
+SelectedArrayPath=VolumeDataContainer|CellData|FeatureIds
+NewArrayName=FeatureIds1
+
+[4]
+Filter_Name=RenameAttributeMatrix
+Filter_Human_Label=Rename Attribute Matrix
+SelectedAttributeMatrixPath=VolumeDataContainer|CellFeatureData|
+NewAttributeMatrix=CellFeatureData1
+
+[5]
+Filter_Name=ScalarSegmentFeatures
+Filter_Human_Label=Segment Features (Scalar)
+CellFeatureAttributeMatrixName=CellFeatureData
+ActiveArrayName=Active
+FeatureIdsArrayName=FeatureIds
+GoodVoxelsArrayPath=VolumeDataContainer|CellFeatureData1|
+UseGoodVoxels=0
+ScalarArrayPath=VolumeDataContainer|CellData|FeatureIds1
+ScalarTolerance=0
+
+[6]
+Filter_Name=RemoveArrays
+Filter_Human_Label=Delete Data
+DataArraysToRemove\size=1
+DataArraysToRemove\1\Path=VolumeDataContainer|CellData|FeatureIds1
+DataArraysToRemove\1\DCFlag=0
+DataArraysToRemove\1\ATTRFlag=0
+DataArraysToRemove\1\DAFlag=2
+
+[7]
+Filter_Name=FindSizes
+Filter_Human_Label=Find Feature Sizes
+CellFeatureAttributeMatrixName=VolumeDataContainer|CellFeatureData|
+NumCellsArrayName=NumCells
+EquivalentDiametersArrayName=EquivalentDiameters
+VolumesArrayName=Volumes
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+
+[8]
+Filter_Name=FillBadData
+Filter_Human_Label=Fill Bad Data
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+CellPhasesArrayPath=VolumeDataContainer|CellData|Phases
+MinAllowedDefectSize=100
+StoreAsNewPhase=0
+ReplaceBadData=1
+
+[9]
+Filter_Name=MinSize
+Filter_Human_Label=Minimum Size Filter
+NumCellsArrayPath=VolumeDataContainer|CellFeatureData|NumCells
+FeaturePhasesArrayPath=VolumeDataContainer|CellFeatureData|
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+MinAllowedFeatureSize=100
+ApplyToSinglePhase=0
+PhaseNumber=0
+
+[10]
+Filter_Name=FindSizes
+Filter_Human_Label=Find Feature Sizes
+CellFeatureAttributeMatrixName=VolumeDataContainer|CellFeatureData|
+NumCellsArrayName=NumCells
+EquivalentDiametersArrayName=EquivalentDiameters
+VolumesArrayName=Volumes
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+
+[11]
+Filter_Name=FindCellQuats
+Filter_Human_Label=Find Cell Quaternions
+QuatsArrayName=Quats
+CrystalStructuresArrayPath=VolumeDataContainer|CellEnsembleData|CrystalStructures
+CellPhasesArrayPath=VolumeDataContainer|CellData|Phases
+CellEulerAnglesArrayPath=VolumeDataContainer|CellData|EulerAngles
+
+[12]
+Filter_Name=FindAvgOrientations
+Filter_Human_Label=Find Feature Average Orientations
+AvgQuatsArrayPath=VolumeDataContainer|CellFeatureData|AvgQuats
+AvgEulerAnglesArrayPath=VolumeDataContainer|CellFeatureData|AvgEulerAngles
+CrystalStructuresArrayPath=VolumeDataContainer|CellEnsembleData|CrystalStructures
+QuatsArrayPath=VolumeDataContainer|CellData|Quats
+CellPhasesArrayPath=VolumeDataContainer|CellData|Phases
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+
+[13]
+Filter_Name=FindFeatureCentroids
+Filter_Human_Label=Find Feature Centroids
+CellFeatureAttributeMatrixName=VolumeDataContainer|CellFeatureData|
+CentroidsArrayName=Centroids
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+
+[14]
+Filter_Name=FindNeighbors
+Filter_Human_Label=Find Feature Neighbors
+CellFeatureAttributeMatrixPath=VolumeDataContainer|CellFeatureData|
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+BoundaryCellsArrayName=BoundaryCells
+SurfaceFeaturesArrayName=SurfaceFeatures
+StoreBoundaryCells=0
+StoreSurfaceFeatures=0
+NumNeighborsArrayName=NumNeighbors
+NeighborListArrayName=NeighborList
+SharedSurfaceAreaListArrayName=SharedSurfaceAreaList
+
+[15]
+Filter_Name=FindFeaturePhases
+Filter_Human_Label=Find Feature Phases
+CellFeatureAttributeMatrixName=VolumeDataContainer|CellFeatureData|
+FeaturePhasesArrayName=Phases
+CellPhasesArrayPath=VolumeDataContainer|CellData|Phases
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+
+[16]
+Filter_Name=FindMisorientations
+Filter_Human_Label=Find Feature Neighbor Misorientations
+AvgMisorientationsArrayName=AvgMisorientations
+MisorientationListArrayName=MisorientationList
+CrystalStructuresArrayPath=VolumeDataContainer|CellEnsembleData|CrystalStructures
+FeaturePhasesArrayPath=VolumeDataContainer|CellFeatureData|Phases
+AvgQuatsArrayPath=VolumeDataContainer|CellFeatureData|AvgQuats
+NeighborListArrayPath=VolumeDataContainer|CellFeatureData|NeighborList
+FindAvgMisors=0
+
+[17]
+Filter_Name=FeatureDataCSVWriter
+Filter_Human_Label=Write Feature Data as CSV File
+CellFeatureAttributeMatrixPath=VolumeDataContainer|CellFeatureData|
+FeatureDataFile=F:\\Research\\Work\\Dream3D_v5.1_wrking\\renumbered.csv
+WriteNeighborListData=1
+
+[18]
+Filter_Name=DataContainerWriter
+Filter_Human_Label=Write DREAM3D Data File
+OutputFile=F:\\Research\\Work\\Dream3D_v5.1_wrking\\renumbered.dream3d
+WriteXdmfFile=0
+
+[19]
+Filter_Name=PhWriter
+Filter_Human_Label=Write Ph File (Feature Ids)
+FeatureIdsArrayPath=VolumeDataContainer|CellData|FeatureIds
+OutputFile=F:\\Research\\Work\\Dream3D_v5.1_wrking\\renumbered.ph

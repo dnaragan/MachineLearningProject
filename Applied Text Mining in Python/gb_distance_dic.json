@@ -1,0 +1,324 @@
+{
+    "0": {
+        "DataContainerName": "N6",
+        "FilterVersion": "1.2.812",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "Create Data Container",
+        "Filter_Name": "CreateDataContainer",
+        "Filter_Uuid": "{816fbe6b-7c38-581b-b149-3f839fb65b93}"
+    },
+    "1": {
+        "ArrayHandling": 0,
+        "BoxDimensions": "Extents:\nX Extent: 0 to 999 (dimension: 1000)\nY Extent: 0 to 999 (dimension: 1000)\nZ Extent: 0 to 0 (dimension: 1)\nBounds:\nX Range: -0.5 to 999.5 (delta: 1000)\nY Range: -0.5 to 999.5 (delta: 1000)\nZ Range: -0.5 to 0.5 (delta: 1)\n",
+        "DataContainerName": "N6",
+        "Dimensions": {
+            "x": 1000,
+            "y": 1000,
+            "z": 1
+        },
+        "EdgeAttributeMatrixName": "EdgeData",
+        "FaceAttributeMatrixName0": "FaceData",
+        "FaceAttributeMatrixName1": "FaceData",
+        "FilterVersion": "1.2.812",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "Create Geometry",
+        "Filter_Name": "CreateGeometry",
+        "Filter_Uuid": "{9ac220b9-14f9-581a-9bac-5714467589cc}",
+        "GeometryType": 0,
+        "HexCellAttributeMatrixName": "CellData",
+        "ImageCellAttributeMatrixName": "CellData",
+        "Origin": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "RectGridCellAttributeMatrixName": "CellData",
+        "Resolution": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+        },
+        "SharedEdgeListArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedHexListArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedQuadListArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedTetListArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedTriListArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedVertexListArrayPath0": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedVertexListArrayPath1": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedVertexListArrayPath2": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedVertexListArrayPath3": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedVertexListArrayPath4": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "SharedVertexListArrayPath5": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "TetCellAttributeMatrixName": "CellData",
+        "TreatWarningsAsErrors": 0,
+        "VertexAttributeMatrixName0": "VertexData",
+        "VertexAttributeMatrixName1": "VertexData",
+        "VertexAttributeMatrixName2": "VertexData",
+        "VertexAttributeMatrixName3": "VertexData",
+        "VertexAttributeMatrixName4": "VertexData",
+        "VertexAttributeMatrixName5": "VertexData",
+        "XBoundsArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "YBoundsArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        },
+        "ZBoundsArrayPath": {
+            "Attribute Matrix Name": "",
+            "Data Array Name": "",
+            "Data Container Name": ""
+        }
+    },
+    "2": {
+        "Dataset Import Info Array": [
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/GrainID"
+            },
+            {
+                "Component Dimensions": "3",
+                "Dataset Path": "/ang"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/e1"
+            },
+            {
+                "Component Dimensions": "3",
+                "Dataset Path": "/avgAng"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/e2"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/exx"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/exy"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/eyy"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/gamma"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/sigma"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/u"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/v"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/x"
+            },
+            {
+                "Component Dimensions": "1",
+                "Dataset Path": "/y"
+            }
+        ],
+        "FilterVersion": "1.2.812",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "Import HDF5 Dataset",
+        "Filter_Name": "ImportHDF5Dataset",
+        "Filter_Uuid": "{9e98c3b0-5707-5a3b-b8b5-23ef83b02896}",
+        "HDF5FilePath": "C:\\Users\\Jrotella\\Desktop\\02_TensionTorsion\\N4_ebsd_dic.h5",
+        "SelectedAttributeMatrix": {
+            "Attribute Matrix Name": "CellData",
+            "Data Array Name": "",
+            "Data Container Name": "N6"
+        }
+    },
+    "3": {
+        "FilterVersion": "1.2.812",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "Convert AttributeArray Data Type",
+        "Filter_Name": "ConvertData",
+        "Filter_Uuid": "{f4ba5fa4-bb5c-5dd1-9429-0dd86d0ecb37}",
+        "OutputArrayName": "FeatureIDs",
+        "ScalarType": 4,
+        "SelectedCellArrayPath": {
+            "Attribute Matrix Name": "CellData",
+            "Data Array Name": "GrainID",
+            "Data Container Name": "N6"
+        }
+    },
+    "4": {
+        "CalcManhattanDist": 0,
+        "DoBoundaries": 1,
+        "DoQuadPoints": 0,
+        "DoTripleLines": 0,
+        "FeatureIdsArrayPath": {
+            "Attribute Matrix Name": "CellData",
+            "Data Array Name": "FeatureIDs",
+            "Data Container Name": "N6"
+        },
+        "FilterVersion": "6.5.138",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "Find Euclidean Distance Map",
+        "Filter_Name": "FindEuclideanDistMap",
+        "Filter_Uuid": "{933e4b2d-dd61-51c3-98be-00548ba783a3}",
+        "GBDistancesArrayName": "GBDistances",
+        "NearestNeighborsArrayName": "NearestNeighbors",
+        "QPDistancesArrayName": "QPManhattanDistances",
+        "SaveNearestNeighbors": 0,
+        "TJDistancesArrayName": "TJManhattanDistances"
+    },
+    "5": {
+        "BackgroundValue": 0,
+        "FilterVersion": "1.0.494",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "ITK::Label Contour Image Filter",
+        "Filter_Name": "ITKLabelContourImage",
+        "Filter_Uuid": "{668f0b90-b504-5fba-b648-7c9677e1f452}",
+        "FullyConnected": 0,
+        "NewCellArrayName": "Boundaries",
+        "SaveAsNewArray": 1,
+        "SelectedCellArrayPath": {
+            "Attribute Matrix Name": "CellData",
+            "Data Array Name": "FeatureIDs",
+            "Data Container Name": "N6"
+        }
+    },
+    "6": {
+        "FilterVersion": "1.0.494",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "ITK::Binary Thinning Image Filter",
+        "Filter_Name": "ITKBinaryThinningImage",
+        "Filter_Uuid": "{dcceeb50-5924-5eae-88ea-34793cf545a9}",
+        "NewCellArrayName": "BoundariesThin",
+        "SaveAsNewArray": 1,
+        "SelectedCellArrayPath": {
+            "Attribute Matrix Name": "CellData",
+            "Data Array Name": "Boundaries",
+            "Data Container Name": "N6"
+        }
+    },
+    "7": {
+        "BackgroundValue": 0,
+        "FilterVersion": "1.0.494",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "ITK::Signed Maurer Distance Map Image Filter",
+        "Filter_Name": "ITKSignedMaurerDistanceMapImage",
+        "Filter_Uuid": "{bb15d42a-3077-582a-be1a-76b2bae172e9}",
+        "InsideIsPositive": 0,
+        "NewCellArrayName": "GBDistancesBetter",
+        "SaveAsNewArray": 1,
+        "SelectedCellArrayPath": {
+            "Attribute Matrix Name": "CellData",
+            "Data Array Name": "BoundariesThin",
+            "Data Container Name": "N6"
+        },
+        "SquaredDistance": 0,
+        "UseImageSpacing": 0
+    },
+    "8": {
+        "FilterVersion": "1.2.812",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "Write DREAM.3D Data File",
+        "Filter_Name": "DataContainerWriter",
+        "Filter_Uuid": "{3fcd4c43-9d75-5b86-aad4-4441bc914f37}",
+        "OutputFile": "C:\\Users\\Jrotella\\Desktop\\02_TensionTorsion\\FromSeanDonegan\\N6\\N6_ebsd_dic_GBdistances.dream3d",
+        "WriteTimeSeries": 0,
+        "WriteXdmfFile": 1
+    },
+    "9": {
+        "Delimiter": 0,
+        "FileExtension": ".txt",
+        "FilterVersion": "1.2.812",
+        "Filter_Enabled": true,
+        "Filter_Human_Label": "Export ASCII Data",
+        "Filter_Name": "WriteASCIIData",
+        "Filter_Uuid": "{5fbf9204-2c6c-597b-856a-f4612adbac38}",
+        "MaxValPerLine": -1,
+        "OutputFilePath": "C:\\Users\\Jrotella\\Desktop\\02_TensionTorsion\\FromSeanDonegan\\N6\\N6_ebsd_dic_GBdistances.csv",
+        "OutputPath": "C:/Users/doneg",
+        "OutputStyle": 1,
+        "SelectedDataArrayPaths": [
+            {
+                "Attribute Matrix Name": "CellData",
+                "Data Array Name": "x",
+                "Data Container Name": "N6"
+            },
+            {
+                "Attribute Matrix Name": "CellData",
+                "Data Array Name": "y",
+                "Data Container Name": "N6"
+            },
+            {
+                "Attribute Matrix Name": "CellData",
+                "Data Array Name": "GBDistancesBetter",
+                "Data Container Name": "N6"
+            },
+            {
+                "Attribute Matrix Name": "CellData",
+                "Data Array Name": "GBDistances",
+                "Data Container Name": "N6"
+            }
+        ]
+    },
+    "PipelineBuilder": {
+        "Name": "gb_distance_dic",
+        "Number_Filters": 10,
+        "Version": 6
+    }
+}
